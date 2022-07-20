@@ -9,7 +9,7 @@ namespace EntityFrameworkCorePractice
 {
     // EF Core Getting Started
     // https://docs.microsoft.com/en-us/ef/core/get-started/overview/install
-    internal class AnimalContext : DbContext
+    public class AnimalContext : DbContext
     {
         public AnimalContext()
         {
@@ -23,5 +23,8 @@ namespace EntityFrameworkCorePractice
             // Trusted_Connection - indicates that our windows account should be used
             options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Matt-EFCorePractice;Trusted_Connection=True;");
         }
+
+        // Tell EF Core to track Animals in the database
+        public DbSet<Animal> Animals { get; set; }
     }
 }
