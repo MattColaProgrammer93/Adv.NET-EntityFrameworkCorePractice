@@ -15,10 +15,19 @@ namespace EntityFrameworkCorePractice
         [Key] // Tells the EF Core to make this a Primary Key (PK)
         public int Id { get; set; }
 
+        /// <summary>
+        /// The animal's name
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// The animal's type
+        /// </summary>
         public string Type { get; set; }
 
+        /// <summary>
+        /// The animal's ability
+        /// </summary>
         public string Ability { get; set; }
     }
 }
